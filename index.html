@@ -14,23 +14,21 @@
             <a href="#home">Home</a>
             <a href="#produtos">Produtos</a>
             <a href="#contato">Contato</a>
+            <a href="#login">Login</a>
         </nav>
     </header>
     <main>
         <h1>Olá mundo!</h1>
-        <h1>Olá mundo!</h1>
-        <h1>Olá mundo!</h1>
-        <h1>Olá mundo!</h1>
-        <h1>Olá mundo!</h1>
         <section id="produtos">
-            Produtos em destaque
-            <ul class="categories">
+            <h2>Produtos</h2>
+            <ul class="category-list">
                 <li>Bicicletas</li>
                 <li>Peças</li>
                 <li>Pinturas</li>
                 <li>Adesivos</li>
-            </ul>
+            </ul><br>
 
+            <h4>Produtos em destaque</h4>
             <table class="tabela-produtos" border="2">
                 <thead>
                     <tr>
@@ -48,20 +46,80 @@
                     <tr>
                         <td>Tinta Púrpura</td>
                         <td>R$ 21,99</td>
-                        <td>Bicicleta</td>
+                        <td>Pintura</td>
                     </tr>
                     <tr>
                         <td>Pneu Aro 18</td>
                         <td>R$ 59,00</td>
-                        <td>Peças</td>
+                        <td>Peça</td>
                     </tr>
                     <tr>
                         <td>Pacotes de adesivos Ben 10</td>
                         <td>R$ 15,00</td>
-                        <td>Adesivos</td>
+                        <td>Adesivo</td>
                     </tr>
                 </tbody>
             </table>
+        </section><br>
+        <section id="login">
+            <h2>Cadastro / Contato</h2>
+
+            <form id="form-login" action="enviar/" method="POST">
+                <fieldset>
+                    <legend>Dados de Login</legend>
+
+                    <label for="input-name">Nome:</label>
+                    <input type="text" id="input-name" name="name" minlength="3" placeholder="digite seu nome completo"
+                        required><br>
+
+                    <label for="input-email">Email:</label>
+                    <input type="email" id="input-email" name="email" placeholder="seu@email.com" required><br>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" minlength="8" placeholder="crie sua senha"
+                        required>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="input-age">Idade:</label>
+                    <input type="number" id="input-age" name="age" min="18" max="120">
+
+                    <p>Tipo de Usuário:</p>
+                    <input type="radio" id="person-pf" name="person" value="pf" required>
+                    <label for="person-pf">Pessoa Física.</label><br>
+
+                    <input type="radio" id="person-pj" name="person" value="pj" required>
+                    <label for="person-pj">Pessoa Jurídica.</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferências</legend>
+                    <p>Categoria que tenho interesse:</p>
+
+                    <select name="category" id="input-category" required>
+                        <option value="">Selecione...</option>
+                        <option value="bike">Bicicletas</option>
+                        <option value="part">Peças</option>
+                        <option value="paint">Pinturas</option>
+                        <option value="sticker">Adesivos</option>
+                    </select><br><br>
+
+
+                    <input type="checkbox" id="check-news" name="preferences" value="news">
+                    <label for="check-news">Desejo receber noticias sobre Caloi!</label><br>
+
+                    <input type="checkbox" id="check-offers" name="preferences" value="offers">
+                    <label for="check-offers">Desejo receber ofertas de produto da Caloi!</label><br>
+
+                    <input type="checkbox" id="check-auto-pass" name="preferences" value="auto-pass">
+                    <label for="check-auto-pass">Manter usuario conectado</label>
+                </fieldset>
+
+                <input type="checkbox" id="check-license" name="preferences" value="license" required>
+                <label for="check-license">Eu li e concordo com a politica de privacidade</label><br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
         </section>
     </main>
     <footer id="contato">
@@ -69,4 +127,5 @@
         Coopright GLP - V3
     </footer>
 </body>
+
 </html>
